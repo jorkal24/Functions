@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after {
+            content: '';
+            display:block;
+            width: 0;
+            height: 0;
+            clear: both;
+        }
+        li {
+            list-style:none;
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            width: 50px;
+            text-align: center;
+        }
+        .container ul {
+            display: flex;
+            width: 450px;
+            position: absolute;
+        }
+        .container {
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul class="clearfix">
+                <li>北京</li>
+                <li>上海</li>
+                <li>天津</li>
+                <li>重庆</li>
+                <li>广州</li>
+                <li>深圳</li>
+                <li>长沙</li>
+                <li>拉萨</li>
+                <li>香港</li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        var move = document.querySelector('ul');
+        var con = doucment.querySelector('.container');
+        
+        var maxMove = move.offsetWidth - con.offsetWidth;
+        
+        move.ontouchstart = function (event){
+            event = event || window.event;
+        }
+        move.ontouchmove = function (event){
+            event = event || window.event;
+        }
+        move.ontouchend = function (event){
+            event = event || window.event;
+        }
+    </script>
+</body>
+</html>

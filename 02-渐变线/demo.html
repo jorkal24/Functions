@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            position: relative;
+        }
+        .content::after {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 1px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background: linear-gradient(275deg,#ce217e,#5e32ff);
+            transition: all 1s;
+        }
+        .content:hover::after{
+            content: '';
+            display: block;
+            width: 100px;
+            height: 1px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background: linear-gradient(275deg,#ce217e,#5e32ff);
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <p>数字货币</p>
+    </div>
+</body>
+
+</html>
